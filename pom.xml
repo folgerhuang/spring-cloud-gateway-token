@@ -6,6 +6,7 @@
     <modules>
         <module>cjs-commons-jwt</module>
         <module>cjs-auth-service</module>
+        <module>cjs-gateway-example</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

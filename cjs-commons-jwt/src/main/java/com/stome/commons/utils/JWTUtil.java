@@ -65,7 +65,14 @@ public class JWTUtil {
 
     public static String getUserInfo(String token) {
         DecodedJWT decodedJWT = JWT.decode(token);
-        String userName = decodedJWT.getClaim("userName").toString();
+        String userName = decodedJWT.getClaim("userName").asString();
         return userName;
     }
+
+//    public static void main(String[] args) {
+//        String token = generateToken("SHIYU", "123456");
+//
+//        String userInfo = getUserInfo(token);
+//        System.out.println(userInfo);
+//    }
 }

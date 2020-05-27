@@ -8,6 +8,7 @@ import com.stome.commons.enums.ResponseCodeEnum;
 import com.stome.commons.utils.JWTUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.validation.BindingResult;
@@ -31,12 +32,11 @@ import java.util.concurrent.TimeUnit;
 @RestController
 public class LoginController {
 
-    /**
+  /*  *//**
      * Apollo 或 Nacos
-
-    @Value("${secretKey:123456}")
      */
-    private String secretKey="123456";
+    @Value("${secretKey:123456}")
+    private String secretKey;
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;

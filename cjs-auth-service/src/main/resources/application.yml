@@ -15,3 +15,5 @@ spring:
         max-idle: 5
         min-idle: 5
         max-wait: 5000
+
+secretKey: 19840915
